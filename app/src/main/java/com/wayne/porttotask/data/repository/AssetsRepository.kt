@@ -10,11 +10,11 @@ import com.wayne.porttotask.data.paging.AssetsPagingDataSource
 import com.wayne.porttotask.data.vo.Asset
 
 interface AssetsRepository {
-    suspend fun getAssets(): LiveData<PagingData<Asset>>
+    fun getAssets(): LiveData<PagingData<Asset>>
 }
 
 class AssetsRepositoryImpl(): AssetsRepository {
-    override suspend fun getAssets(): LiveData<PagingData<Asset>> {
+    override fun getAssets(): LiveData<PagingData<Asset>> {
         return Pager(
             config = PagingConfig(
                 pageSize = Constant.LIMIT

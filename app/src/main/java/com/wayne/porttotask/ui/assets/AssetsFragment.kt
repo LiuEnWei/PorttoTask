@@ -28,11 +28,10 @@ class AssetsFragment :
     override fun init() {
         binding?.listAssets?.adapter = assetsAdapter
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.fetchAssetsPagingData().observe(
+            viewModel.assetsList.observe(
                 viewLifecycleOwner,
                 Observer {
                     assetsAdapter.submitData(lifecycle, it)
-
                 })
         }
     }

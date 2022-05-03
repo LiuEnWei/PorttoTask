@@ -24,7 +24,6 @@ class AssetFragment : BaseFragment<FragmentAssetBinding>(R.layout.fragment_asset
     }
 
     override fun init() {
-        val bar = activity?.actionBar
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchAsset(args.contractAddress, args.tokenId).observe(
                 viewLifecycleOwner,
