@@ -1,11 +1,11 @@
 package com.wayne.porttotask.di
 
-import com.wayne.porttotask.data.repository.AssetsRepository
-import com.wayne.porttotask.data.repository.AssetsRepositoryImpl
+import com.wayne.porttotask.data.repository.OpenseaRepository
+import com.wayne.porttotask.data.repository.OpenseaRepositoryImpl
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<AssetsRepository> {
-        AssetsRepositoryImpl()
+    single<OpenseaRepository> {
+        OpenseaRepositoryImpl()
     }
 }
